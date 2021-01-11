@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            width: 400px;
+        }
+        legend {
+            padding: 5px;
+            margin-left: 10px;
+        }
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+<body> 
+    <!-- maxlength 限制长度
+         autofocus 页面打开自动对焦
+    -->
+    <!-- <fieldset>
+        <legend>必填信息</legend>
+        <div>
+            <span>手机号：</span>
+            <input type="text" maxlength="11">
+        </div>
+        <div>
+            <span>邮箱：</span>
+            <input type="text" autofocus>
+        </div>
+    </fileset> -->
+    <form action="http://www.baidu.com" 
+          method="POST"
+          enctype="multipart/form-data">
+        <input type="file" name="photo">
+        足球<input type="checkbox" value="1" name="happy">
+        篮球<input type="checkbox" value="2" name="happy">
+        棒球<input type="checkbox" value="3" name="happy">
+        <input type="text" tabindex="-1">
+        <input type="submit">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+    </form>
+</body>
+</html>

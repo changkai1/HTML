@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            width: 100px;
+            height: 100px;
+            background-color: #ff0000;
+
+            /* 超出显示一行省略号 */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        div {
+            width: 100px;
+            color: #fff;
+            background-color:green;
+
+            /* 超出显示两行省略号 */
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        辅导教师弗兰克斯金合欢花放假独守空房哈就开始了发
+    </p>
+    <div>
+        附加按房间爱考虑是否静安寺发房间爱死了大家奥斯卡来得及
+    </div>
+</body>
+</html>

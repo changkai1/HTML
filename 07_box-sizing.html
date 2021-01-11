@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background: red;
+            padding: 10px;
+            /* 
+                内容盒子
+                content-box: 宽高只是指定的内容的宽高，不包括border和padding
+             */
+            box-sizing: content-box;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background: #000;
+            float: left;
+            padding: 10px;
+            /* 
+                border-box: 宽度和高度包括内容/border/padding 的高度
+             */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

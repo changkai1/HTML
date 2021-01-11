@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 匹配title属性值以单词one开头的元素 */
+        [title^="one"] {
+            color: red;
+        }
+
+        /* 匹配title属性值以单词one结尾的元素 */
+        [title$="one"] {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        /* 匹配title的属性值恰好等于one，或者以单词one开头其后面紧跟着连字符(-)的元素 */
+        [title |= "one"] {
+            background: skyblue;
+        }
+
+        /* 匹配title的属性值包含one的元素（单词one与其他单词之间必须用空格隔开） */
+        [title ~= "one"] {
+            font-style: oblique;
+        }
+
+        /* 动态伪类 */
+        input:focus {
+            background-color: red;
+        }
+        /* a:focus {
+            outline: none;
+        } */
+    </style>
+</head>
+<body>
+    <!-- 动态伪类 -->
+    <input type="text">
+    <a tabindex="-1" href="#">百度一下</a>
+
+    <div title="onedd">文字内容1</div>
+    <p title="one two">文字内容2</p>
+    <p title="onetwo">文字内容3</p>
+    <p title="one-two">文字内容2</p>
+    <p title="one_two">文字内容2</p>
+
+    <div title="one">文字内容1</div>
+    <p title="two one">文字内容2</p>
+    <p title="twoone">文字内容3</p>
+    <p title="two-one">文字内容2</p>
+    <p title="two_one">文字内容2</p>
+
+    <div title="test one two">文字内容1</div>
+    <div title="test-one">文字内容2</div>
+    <div title="one two">文字内容3</div>
+    <div title="one-two">文字内容4</div>
+    <div title="one_two">文字内容5</div>
+    <div title="one">文字内容6</div>
+    <div title="two">文字内容7</div>
+
+    <div title="testonetwo">文字内容1</div>
+    <div title="testone two">文字内容2</div>
+    <div title="test one two">文字内容3</div>
+    <div title="test one">文字内容4</div>
+    <div title="one two">文字内容5</div>
+    <div title="one-two">文字内容6</div>
+    <div title="one_two">文字内容7</div>
+    <div title="one">文字内容8</div>
+    <div title="two">文字内容9</div>
+</body>
+</html>

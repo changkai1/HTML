@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自办、合作项目销售汇总表</title>
+    <script src="./jquery-2.1.1.min.js"></script>
+</head>
+<body>
+    <input type="button" value="按钮" id="btn">
+    <!--startprint-->
+    <h1>1233</h1>
+    <table border="1" cellspacing="0">
+        <tr>
+            <th>分类</th>
+            <th>等级</th>
+            <th>A级</th>
+            <th>B级</th>
+            <th>C级</th>
+            <th>D级</th>
+        </tr>
+        <tr>
+            <td>
+                票价等级
+            </td>
+            <td>
+                票价
+            </td>
+            <td>
+                100
+            </td>
+            <td>
+                10
+            </td>
+            <td>
+                1
+            </td>
+            <td>
+                0.1
+            </td>
+        </tr>
+    </table>
+    <!--endprint-->
+
+</body>
+</html>
+<style media="print">
+@page {
+    size: auto;  /* auto is the initial value */
+    margin: 0mm; /* this affects the margin in the printer settings */
+}
+</style>
+<script>
+let btn = document.getElementById('btn');
+btn.onclick = function () {
+    result = {
+        date: '2020-09-21',
+        userName: '王五'
+    }
+    html_str = window.document.body.innerHTML;
+    start_str = "<!--startprint-->";
+    end_str = "<!--endprint-->";
+
+    new_html = html_str.substr(html_str.indexOf(start_str)+17);
+    new_html = new_html.substring(0,new_html.indexOf(end_str));  //截取标记之间的代码段
+    window.document.body.innerHTML = new_html+
+        "<table><tr><td>打印日期：</td><td>" +
+        result.date +
+        "</td></tr><tr><td>操作员：</td><td>" +
+        result.userName +
+        "</td></tr></table>";
+
+    window.print();
+    window.document.body.innerHTML=html_str;
+    location.reload();
+    console.log(1,html_str)
+    console.log(2,new_html)
+}
+</script>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 关键帧动画 */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+            
+        }
+        .box:hover {
+            /* 关键帧动画 */
+            animation: test1 4s linear, test2 4s linear;
+            
+        }
+        /* 关键帧动画 */
+        @keyframes test1 {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(400px, 0);
+            }
+            50% {
+                transform: translate(400px, 400px);
+            }
+            75% {
+                transform: translate(0, 400px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+        @keyframes test2 {
+            0% {
+                opacity: 1;
+            }
+            25% {
+                opacity: 0.6;
+            }
+            50% {
+                opacity: 0.3;
+            }
+            75% {
+                opacity: 0.6;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

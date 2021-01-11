@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin-bottom: 30px;
+        } 
+        /* 边框是梯形 */
+        .box {
+            width: 100px;
+            height: 100px;
+            background: red;
+            border-top: 30px solid pink;
+            border-left: 30px solid skyblue;
+        }
+
+        /* 两个三角形 */
+        .box1 {
+            width: 0;
+            height: 0;
+            border-top: 50px solid red;
+            border-left: 50px solid blue;
+        }
+
+        /* 四个三角形 */
+        .box2 {
+            width: 0;
+            height: 0;
+            border-top: 80px solid yellowgreen;
+            border-right: 80px solid green;
+            border-bottom: 80px solid black;
+            border-left: 80px solid purple;
+        }
+
+        /* 一个三角形，把三个边设置为透明 */
+        .box3 {
+            width: 0;
+            height: 0;
+            border-top: 80px solid yellowgreen;
+            border-right: 80px solid transparent;
+            border-bottom: 80px solid transparent;
+            border-left: 80px solid transparent;
+        }
+
+        /* 一个三角形，使用旋转 */
+        .box4 {
+            margin-left: 10px;
+            width: 0;
+            height: 0;
+            border-top: 80px solid yellowgreen;
+            border-left: 80px solid transparent;
+            /* 逆时针旋转 -45度 */
+            transform: rotate(-45deg); 
+        }
+    </style>
+</head>
+<body>
+    <!-- 边框是梯形 -->
+    <div class="box"></div>
+
+    <!-- 两个三角形 -->
+    <div class="box1"></div>
+
+    <!-- 四个三角形 -->
+    <div class="box2"></div>
+
+    <!-- 一个三角形,把三个边设置为透明 -->
+    <div class="box3"></div>
+
+    <!-- 一个三角形，使用旋转 -->
+    <div class="box4"></div>
+</body>
+</html>
